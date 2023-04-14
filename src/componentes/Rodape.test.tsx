@@ -67,9 +67,5 @@ describe('quando existem participantes suficientes', () => {
             expect(mockNavegacao).toHaveBeenCalledTimes(1)
             expect(mockNavegacao).toHaveBeenCalledWith('/sorteio')
             expect(mockSorteio).toHaveBeenCalledTimes(1)
-
-
-
-
     })
 })

@@ -1,6 +1,8 @@
 import {useState, useRef} from 'react';
 import { useAdicionarParticipantes } from '../state/hook/useAdicionarParticipantes';
 import { useMensagemDeerro } from '../state/hook/useMensagemDeErro';
+import './Formulario.css'
+
 
 const Formulario = () => {
 
@@ -20,6 +22,7 @@ const Formulario = () => {
 
     return (
         <form onSubmit={adicionarParticipantes}>
+            <div className="grupo-input-btn">
             <input
             ref={inputRef} 
             value={nome}
@@ -28,8 +31,8 @@ const Formulario = () => {
             placeholder="Insira os nomes dos participantes"
             />
             <button disabled={!nome}>Adicionar</button>
-            {mensagemDeErro && <p role="alert">{mensagemDeErro}</p>}
-
+            {mensagemDeErro && <p className="alerta erro" role="alert">{mensagemDeErro}</p>}
+            </div>
         </form>
     )
 }
